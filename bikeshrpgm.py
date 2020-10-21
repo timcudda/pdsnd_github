@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+# city data
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -17,7 +18,7 @@ def get_filters():
     (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!\n')
-
+# this section for user data
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Enter a city either Chicago, New York City or Washington: \n").lower()
     while city not in ['chicago', 'new york city', 'washington','all']:
@@ -36,7 +37,7 @@ def get_filters():
     print('-'*40)
 
     return city, month, day
-
+# load city data
 def load_data(city, month, day):
 
     """
